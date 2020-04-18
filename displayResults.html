@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<title>Analysis of the given handle</title>
+	</head>
+	<body>
+		<h1>5 most recent tweets : </h1></br>		
+		{% if dummy %}
+			{% for x in dummy %}
+				{{x}}</br>
+			{% endfor %}
+		{% endif %}
+		</br></br><hr>
+
+		<h1>The top tweets are : </h1></br>		
+		{% if topTweets %}
+			{% for y in topTweets %}
+				{{y}}</br>
+			{% endfor %}
+		{% endif %}
+		</br></br><hr>
+		
+		<h1>Sentiment Analysis data : </h1></br>		
+		{% if sentimentAnalysis %}
+			{% for z in sentimentAnalysis %}
+				{{z}}</br>
+			{% endfor %}
+		{% endif %}		
+		</br></br><hr>
+
+		<h1>Number of likes per tweet versus the Dates</h1>
+		<img src="{{ url_for('static',filename='tfavplot.png') }}">
+		</br></br><hr>
+	
+		<h1>Number of Retweets per tweet versus the Dates</h1>
+		<img src="{{ url_for('static',filename='tretplot.png') }}">
+		</br></br><hr>
+
+		<h1>Length of tweet versus the Dates</h1>
+		<img src="{{ url_for('static',filename='tlenplot.png') }}">
+		</br></br><hr>
+	</body>
+</html>
+
